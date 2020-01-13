@@ -10,8 +10,8 @@ TOP=$(pwd)
 # Untar phoebus
 ##############################################################
 cd $TOP
-tar -xzf phoebus.tar.gz
-rm -f phoebus.tar.gz
+unzip -q phoebus-*.zip
+rm -f phoebus-*.zip
 
 ##############################################################
 # Set owner
