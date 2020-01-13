@@ -1,0 +1,25 @@
+diff --git a/phoebus-product/build.xml b/phoebus-product/build.xml
+index e6fbfe8a1..bca75c716 100644
+--- a/phoebus-product/build.xml
++++ b/phoebus-product/build.xml
+@@ -15,7 +15,7 @@
+
+   <target name="product" depends="copy-doc" description="Assemble product">
+     <mkdir dir="${classes}"/>
+-
++
+     <!-- Assemble lib/ -->
+     <copy todir="${build}/lib" flatten="true">
+       <!-- Copy all application dependencies -->
+@@ -28,6 +28,11 @@
+         <exclude name="app/**/app-alarm-server*.jar"/>
+         <exclude name="app/**/app-scan-server*.jar"/>
+         <exclude name="app/alarm/examples/**/*.jar"/>
++        <exclude name="app/**/app-scan*.jar"/>
++        <exclude name="app/**/app-logbook-inmemory*.jar"/>
++        <exclude name="app/**/app-display-convert*.jar"/>
++        <exclude name="app/**/app-channel*.jar"/>
++        <exclude name="app/**/app-save-and-restore*.jar"/>
+       </fileset>
+     </copy>
+ 

@@ -1,0 +1,13 @@
+#
+# Copyright (c) 2019 Cosylab d.d.
+# This software is distributed under the terms found
+# in file LICENSE.txt that is included with this distribution.
+#
+
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=Phoebus
+Icon=/opt/nusano/gui/phoebus/logo.png
+Exec=/usr/local/bin/phoebus
+Categories=GTK;GNOME;Utility;Science;
