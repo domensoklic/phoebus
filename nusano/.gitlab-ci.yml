@@ -1,0 +1,24 @@
+image: maven:3-jdk-11
+
+stages:
+  - package
+
+package:
+  stage: package
+
+  variables:
+    GIT_STRATEGY: clone
+  script:
+    - cd nusano
+    - bash build.sh
+    - cd ..
+  only:
+    - tags
+  artifacts:
+    name: "phoebus_$CI_COMMIT_TAG"
+    paths:
+     - phoebus-product/target/phoebus-4.6.0-linux.zip
+     - phoebus
+     - phoebus.desktop
+     - logo.png
+     - deploy.sh

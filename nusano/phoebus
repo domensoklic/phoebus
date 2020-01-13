@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Copyright (c) 2019 Cosylab d.d.
+# This software is distributed under the terms found
+# in file LICENSE.txt that is included with this distribution.
+#
+
+# Check if settings.ini file exists
+PHOEBUS_SETTINGS=/opt/nusano/nusano-hmi/configuration/settings.ini
+if [ -f "$PHOEBUS_SETTINGS" ]; then
+    PHOEBUS_OPT="-settings $PHOEBUS_SETTINGS"
+fi
+
+# Start Phoebus
+cd /opt/nusano/gui/phoebus/phoebus-product && \
+    ./phoebus.sh $PHOEBUS_OPT "$@"
