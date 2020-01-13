@@ -17,10 +17,10 @@ package:
     - bash build.sh
     - cd ..
     - cp phoebus-product/target/phoebus-4.6.0-linux.zip .
-    - nusano/phoebus .
-    - nusano/phoebus.desktop .
-    - nusano/logo.png .
-    - nusano/deploy.sh .
+    - cp nusano/phoebus .
+    - cp nusano/phoebus.desktop .
+    - cp nusano/logo.png .
+    - cp nusano/deploy.sh .
   artifacts:
     name: "phoebus_$CI_COMMIT_TAG"
     paths:
