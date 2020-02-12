@@ -22,7 +22,7 @@ package:
     - cp nusano/logo.png .
     - cp nusano/deploy.sh .
   artifacts:
-    name: "phoebus_$CI_COMMIT_TAG"
+    name: "phoebus-$CI_COMMIT_TAG"
     paths:
      - phoebus-4.6.0-linux.zip
      - phoebus
