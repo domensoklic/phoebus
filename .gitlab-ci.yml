@@ -10,6 +10,9 @@ stages:
 package:
   stage: package
 
+  only:
+    - tags
+
   variables:
     GIT_STRATEGY: clone
   script:
