@@ -12,5 +12,5 @@ if [ -f "$PHOEBUS_SETTINGS" ]; then
 fi
 
 # Start Phoebus
-cd /opt/nusano/gui/phoebus/phoebus-product && \
+cd /opt/nusano/gui/phoebus-nusano/phoebus-* && \
     ./phoebus.sh $PHOEBUS_OPT "$@"
