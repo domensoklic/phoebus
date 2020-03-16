@@ -6,7 +6,7 @@
 #
 
 # Check if settings.ini file exists
-PHOEBUS_SETTINGS=/opt/nusano/nusano-hmi/configuration/settings.ini
+PHOEBUS_SETTINGS=/opt/nusano/gui/nusano-hmi/configuration/settings.ini
 if [ -f "$PHOEBUS_SETTINGS" ]; then
     PHOEBUS_OPT="-settings $PHOEBUS_SETTINGS"
 fi
