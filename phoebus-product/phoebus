@@ -1,0 +1,34 @@
+#!/bin/bash
+#
+# Copyright (c) 2019 Cosylab d.d.
+# This software is distributed under the terms found
+# in file LICENSE.txt that is included with this distribution.
+#
+
+# To get one instance, use server mode
+PHOEBUS_OPT="-server 4918"
+
+# Check if settings.ini file exists
+PHOEBUS_SETTINGS=/opt/nusano/gui/configuration/settings.ini
+if [ -f "$PHOEBUS_SETTINGS" ]; then
+    PHOEBUS_OPT="$PHOEBUS_OPT -settings $PHOEBUS_SETTINGS"
+fi
+
+# Check if logging.preferences file exists
+PHOEBUS_LOGGING=/opt/nusano/gui/configuration/logging.properties
+if [ -f "$PHOEBUS_LOGGING" ]; then
+    PHOEBUS_OPT="$PHOEBUS_OPT -logging $PHOEBUS_LOGGING"
+fi
+
+
+JDK_JAVA_OPTIONS=" -DCA_DISABLE_REPEATER=true"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS -Dnashorn.args=--no-deprecation-warning"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS -Dlogback.configurationFile=/opt/nusano/gui/nusano-hmi/configuration/logback.xml"
+#JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS -Djdk.gtk.verbose=false -Djdk.gtk.version=2 -Dprism.forceGPU=true"
+#JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS -Dorg.csstudio.javafx.rtplot.update_counter=false"
+export JDK_JAVA_OPTIONS
+
+# Start Phoebus
+cd /opt/nusano/phoebus
+echo "JDK_JAVA_OPTIONS: $JDK_JAVA_OPTIONS"
+./phoebus.sh $PHOEBUS_OPT "$@"

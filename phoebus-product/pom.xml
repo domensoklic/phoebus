@@ -27,6 +27,7 @@
       <artifactId>app-probe</artifactId>
       <version>4.6.4-SNAPSHOT</version>
     </dependency>
+    <!--
     <dependency>
       <groupId>org.phoebus</groupId>
       <artifactId>app-logbook-inmemory</artifactId>
@@ -41,6 +42,12 @@
       <groupId>org.phoebus</groupId>
       <artifactId>app-logbook-olog</artifactId>
       <version>4.6.4-SNAPSHOT</version>
+    </dependency>
+    -->
+    <dependency>
+      <groupId>org.phoebus</groupId>
+      <artifactId>app-logbook-olog</artifactId>
+      <version>4.6.0</version>
     </dependency>
     <dependency>
       <groupId>org.phoebus</groupId>
@@ -112,11 +119,13 @@
       <artifactId>app-display-convert-edm</artifactId>
       <version>4.6.4-SNAPSHOT</version>
     </dependency>
+    <!--
     <dependency>
       <groupId>org.phoebus</groupId>
       <artifactId>app-scan-ui</artifactId>
       <version>4.6.4-SNAPSHOT</version>
     </dependency>
+    -->
     <dependency>
       <groupId>org.phoebus</groupId>
       <artifactId>app-alarm-ui</artifactId>
@@ -183,16 +192,21 @@
       <version>${diirt.version}</version>
     </dependency>
       -->
+    <!-- channel finder
     <dependency>
       <groupId>org.phoebus</groupId>
       <artifactId>app-channel-views</artifactId>
       <version>4.6.4-SNAPSHOT</version>
     </dependency>
+    -->
+    <!--
     <dependency>
       <groupId>org.phoebus</groupId>
       <artifactId>app-channel-channelfinder</artifactId>
       <version>4.6.4-SNAPSHOT</version>
     </dependency>
+    -->
+
     <dependency>
       <groupId>org.phoebus</groupId>
       <artifactId>app-save-and-restore-ui</artifactId>

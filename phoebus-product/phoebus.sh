@@ -26,7 +26,6 @@ then
   echo "Updated."
 fi
 
-
 JAR=`echo ${TOP}/product-*.jar`
 
 # To get one instance, use server mode
