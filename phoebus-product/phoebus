@@ -31,4 +31,5 @@ export JDK_JAVA_OPTIONS
 # Start Phoebus
 cd /opt/nusano/phoebus
 echo "JDK_JAVA_OPTIONS: $JDK_JAVA_OPTIONS"
+cd /opt/nusano/gui/phoebus/phoebus/phoebus-product/
 ./phoebus.sh $PHOEBUS_OPT "$@"
