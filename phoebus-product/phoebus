@@ -23,7 +23,7 @@ fi
 
 JDK_JAVA_OPTIONS=" -DCA_DISABLE_REPEATER=true"
 JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS -Dnashorn.args=--no-deprecation-warning"
-JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS -Dlogback.configurationFile=/opt/nusano/gui/nusano-hmi/configuration/logback.xml"
+JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS -Dlogback.configurationFile=/opt/nusano/nusano-gui/configuration/logback.xml"
 #JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS -Djdk.gtk.verbose=false -Djdk.gtk.version=2 -Dprism.forceGPU=true"
 #JDK_JAVA_OPTIONS="$JDK_JAVA_OPTIONS -Dorg.csstudio.javafx.rtplot.update_counter=false"
 export JDK_JAVA_OPTIONS
@@ -31,5 +31,5 @@ export JDK_JAVA_OPTIONS
 # Start Phoebus
 cd /opt/nusano/phoebus
 echo "JDK_JAVA_OPTIONS: $JDK_JAVA_OPTIONS"
-cd /opt/nusano/gui/phoebus/phoebus/phoebus-product/
+cd /opt/nusano/phoebus/phoebus-product/
 ./phoebus.sh $PHOEBUS_OPT "$@"
