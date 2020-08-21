@@ -34,12 +34,13 @@ package_phoebus:
   script:
     - echo "Packaging Phoebus ...."
     - cp phoebus-product/target/product-*.tar.gz phoebus_$CI_COMMIT_TAG.tar.gz
+    - cp phoebus-product/deploy.sh deploy.sh
   artifacts:
     name: "phoebus_$CI_COMMIT_TAG"
     paths:
      - phoebus*.tar.gz
      - source-tree.tar.gz
-     - phoebus-product/deploy.sh
+     - deploy.sh
     expire_in: 1 mos
 
 package_alarm_server:
