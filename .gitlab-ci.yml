@@ -30,39 +30,39 @@ package_phoebus:
     - tags
   script:
     - echo "Packaging Phoebus ...."
-    - cp phoebus-product/target/product-*.tar.gz .
+    - cp phoebus-product/target/product-*.tar.gz phoebus_$CI_COMMIT_TAG.tar.gz
   artifacts:
     name: "phoebus_$CI_COMMIT_TAG"
     paths:
-     - product-*.tar.gz
+     - phoebus*.tar.gz
     expire_in: 1 mos
 
-package_alarm_server:
-  stage: package
-  dependencies:
-    - build
-  only:
-    - tags
-  script:
-    - echo "Packaging Alarm server ...."
-    - cp services/alarm-server/target/service-alarm-server-*.tar.gz .
-  artifacts:
-    name: "alarm-server_$CI_COMMIT_TAG"
-    paths:
-     - service-alarm-server-*.tar.gz
-    expire_in: 1 mos
+# package_alarm_server:
+#   stage: package
+#   dependencies:
+#     - build
+#   only:
+#     - tags
+#   script:
+#     - echo "Packaging Alarm server ...."
+#     - cp services/alarm-server/target/service-alarm-server-*.tar.gz .
+#   artifacts:
+#     name: "alarm-server_$CI_COMMIT_TAG"
+#     paths:
+#      - service-alarm-server-*.tar.gz
+#     expire_in: 1 mos
 
-package_alarm_logger:
-  stage: package
-  dependencies:
-    - build
-  only:
-    - tags
-  script:
-    - echo "Packaging Alarm logger ...."
-    - cp services/alarm-logger/target/service-alarm-logger-*.tar.gz .
-  artifacts:
-    name: "alarm-logger_$CI_COMMIT_TAG"
-    paths:
-     - service-alarm-logger-*.tar.gz
-    expire_in: 1 mos
+# package_alarm_logger:
+#   stage: package
+#   dependencies:
+#     - build
+#   only:
+#     - tags
+#   script:
+#     - echo "Packaging Alarm logger ...."
+#     - cp services/alarm-logger/target/service-alarm-logger-*.tar.gz .
+#   artifacts:
+#     name: "alarm-logger_$CI_COMMIT_TAG"
+#     paths:
+#      - service-alarm-logger-*.tar.gz
+#     expire_in: 1 mos
