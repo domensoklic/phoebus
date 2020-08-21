@@ -18,7 +18,7 @@ build:
 
   artifacts:
     paths:
-      - src.tar.gz
+      - source-tree.tar.gz
       - phoebus-product/target/product-*.tar.gz
       - services/alarm-server/target/service-alarm-server-*.tar.gz
       - services/alarm-logger/target/service-alarm-logger-*.tar.gz
@@ -37,7 +37,7 @@ package_phoebus:
     name: "phoebus_$CI_COMMIT_TAG"
     paths:
      - phoebus*.tar.gz
-     - src.tar.gz
+     - source-tree.tar.gz
     expire_in: 1 mos
 
 package_alarm_server:
@@ -53,7 +53,7 @@ package_alarm_server:
     name: "alarm-server_$CI_COMMIT_TAG"
     paths:
      - service-alarm-server-*.tar.gz
-     - src.tar.gz
+     - source-tree.tar.gz
     expire_in: 1 mos
 
 package_alarm_logger:
@@ -69,5 +69,5 @@ package_alarm_logger:
     name: "alarm-logger_$CI_COMMIT_TAG"
     paths:
      - service-alarm-logger-*.tar.gz
-     - src.tar.gz
+     - source-tree.tar.gz
     expire_in: 1 mos
