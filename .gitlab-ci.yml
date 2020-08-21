@@ -22,6 +22,7 @@ build:
       - phoebus-product/target/product-*.tar.gz
       - services/alarm-server/target/service-alarm-server-*.tar.gz
       - services/alarm-logger/target/service-alarm-logger-*.tar.gz
+      - phoebus-product/deploy.sh
     # untracked: true
 
 package_phoebus:
@@ -38,6 +39,7 @@ package_phoebus:
     paths:
      - phoebus*.tar.gz
      - source-tree.tar.gz
+     - phoebus-product/deploy.sh
     expire_in: 1 mos
 
 package_alarm_server:
