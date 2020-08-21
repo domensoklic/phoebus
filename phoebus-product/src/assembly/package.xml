@@ -17,6 +17,7 @@
         <include>*.sh</include>
         <include>*.bat</include>
         <include>*.desktop</include>
+        <include>phoebus</include>
       </includes>
     </fileSet>
     <fileSet>
