@@ -13,7 +13,7 @@ build:
   variables:
     GIT_STRATEGY: clone
   script:
-    - tar --exclude='./.git' -zcvf src.tar.gz .
+    - git archive $CI_COMMIT_SHA | gzip > source-tree.tar.gz
     - bash run_maven.sh
 
   artifacts:
