@@ -14,7 +14,7 @@ cd $TOP
 unzip -q phoebus-*.zip
 rm -f phoebus-*.zip
 tar xzvf phoebus_*.tar.gz
-mv product-*/* .
+mv -f product-*/* .
 rmdir product-*/
 
 ##############################################################
