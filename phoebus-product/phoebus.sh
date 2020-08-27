@@ -4,7 +4,7 @@
 
 # When deploying, change "TOP"
 # to the absolute installation path
-TOP="/opt/nusano/phoebus/phoebus-product/"
+TOP="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Ideally, assert that Java is found
 # export JAVA_HOME=/opt/jdk-9
